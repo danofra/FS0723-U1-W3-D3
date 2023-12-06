@@ -1,23 +1,30 @@
 const form = document.getElementById("main-form");
+const input = document.getElementById("text-1");
+const art = document.getElementById("art-1");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log("Comincio a recuperare i dati del form");
-  const inputText = document.getElementById("text-1");
-  console.log(inputText.value);
-  const userCard = document.createElement("div");
-  userCard.innerHTML = `
-        <p>${inputText.value}</p>
+
+  if (input.value.trim() === "") {
+    console.log("campo vuoto");
+    alert("Compilare il campo!");
+  } else {
+    const userCard = document.createElement("div");
+    userCard.classList.add("task");
+    userCard.innerHTML = `
+        <span class="list" onclick="barrato(event)">${input.value}</span>
+        <button class="delete" onclick="deleted(event)">Elimina</button>
     `;
-  const cardArticle = document.getElementById("card");
-  cardArticle.appendChild(userCard);
 
-  inputText.value = "";
+    art.appendChild(userCard);
+    input.value = "";
+  }
 });
 
-const cards = document.createElement("div");
-cards.classList.add("barrato");
-cards.appendChild(userCard);
-cards.addEventListener("onclick", function (e) {
-  userCard.classList.toggle("completo");
-  (cards.style.display = userCard.classList.contains("completo")), "hidden";
-});
+const barrato = function (event) {
+  event.target.classList.toggle("barrato");
+};
+
+const deleted = function (event) {
+  event.target.closest(".task").remove(); // Rimuovi l'elemento invece di aggiungere la classe "delete"
+};
