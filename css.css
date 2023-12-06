@@ -1,0 +1,45 @@
+body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#sec-1 {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding-bottom: 40%;
+  font-size: 1.2em;
+}
+#art-1 {
+  display: inline-block;
+  width: 500px;
+  text-align: right;
+  padding: 5px;
+  font-size: 1.2em;
+  background-color: gray;
+  border-radius: 18px 18px 0px 0px;
+}
+
+input,
+button {
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+}
+button {
+  margin-right: 5px;
+}
+input {
+  width: 260px;
+}
+hr {
+  margin: 0px;
+  border: 1px solid black;
+}
+
+.barrato {
+  text-decoration: line-through;
+}
