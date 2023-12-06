@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Esercizio Javascript</title>
-    <link rel="stylesheet" href="./css.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/css.css" />
   </head>
   <body>
     <main>
+      <section>
+        <article>
+          <h1>LISTA DELLA SPESA</h1>
+        </article>
+      </section>
       <section id="sec-1">
         <article id="art-1">
           <form id="main-form">
@@ -15,16 +21,19 @@
               <input
                 id="text-1"
                 type="text"
-                placeholder="Scrivi dentro i nomi dei giganti che conosci"
+                placeholder="Inserisci l'articolo da acquistare"
               />
-              <button id="btn-1">Invia dati</button>
+              <button class="btn-1">Inserisci</button>
             </div>
           </form>
+          <hr />
         </article>
-
         <article id="card"></article>
       </section>
     </main>
+    <footer id="footer-bar">
+      <p>&copy By Liborio Daniele Frasca</p>
+    </footer>
     <script src="./js.js"></script>
   </body>
 </html>

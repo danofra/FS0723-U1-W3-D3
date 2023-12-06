@@ -13,7 +13,7 @@ form.addEventListener("submit", function (e) {
     userCard.classList.add("task");
     userCard.innerHTML = `
         <span class="list" onclick="barrato(event)">${input.value}</span>
-        <button class="delete" onclick="deleted(event)">Elimina</button>
+        <button class="btn-1" class="delete" onclick="deleted(event)">Elimina</button>
     `;
 
     art.appendChild(userCard);
